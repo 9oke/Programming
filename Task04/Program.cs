@@ -7,7 +7,7 @@ Console.Write("Введите число: ");
 int num1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите число: ");
+Console.Write("Введите число:  ");
 int num3 = Convert.ToInt32(Console.ReadLine());
 int max = num1;
 if (num2 > max)
