@@ -5,7 +5,7 @@
 // a = 2, b = 10 -> нет
 // a = 9, b = -3 -> да
 // a = -3 b = 9 -> нет
-Console.Write("Введите первое число: ");
+Console.Write("Введите первое число:  ");
 double num1 = Convert.ToDouble(Console.ReadLine());
 Console.Write("Введите второе число: ");
 double num2 = Convert.ToDouble(Console.ReadLine());
