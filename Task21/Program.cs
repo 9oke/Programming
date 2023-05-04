@@ -6,18 +6,18 @@
 
 Console.WriteLine("Введите координаты точки A");
 Console.Write("X: ");
-int numAx = int.Parse(Console.ReadLine());
+int numAx = Convert.ToInt32(Console.ReadLine());
 Console.Write("Y: ");
-int numAy = int.Parse(Console.ReadLine());
+int numAy = Convert.ToInt32(Console.ReadLine());
 Console.Write("Z: ");
-int numAz = int.Parse(Console.ReadLine());
+int numAz = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите координаты точки B");
 Console.Write("X: ");
-int numBx = int.Parse(Console.ReadLine());
+int numBx = Convert.ToInt32(Console.ReadLine());
 Console.Write("Y: ");
-int numBy = int.Parse(Console.ReadLine());
+int numBy = Convert.ToInt32(Console.ReadLine());
 Console.Write("Z: ");
-int numBz = int.Parse(Console.ReadLine());
+int numBz = Convert.ToInt32(Console.ReadLine());
 
 double distance = Distance(numAx, numAy, numAz, numBx, numBy, numBz);
 double result = Math.Round(distance, 2, MidpointRounding.ToZero);
