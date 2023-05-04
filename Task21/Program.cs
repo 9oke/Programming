@@ -20,12 +20,11 @@ Console.Write("Z: ");
 int numBz = int.Parse(Console.ReadLine());
 
 double distance = Distance(numAx, numAy, numAz, numBx, numBy, numBz);
+double result = Math.Round(distance, 2, MidpointRounding.ToZero);
+Console.WriteLine($"Расстояние между точками: {result}");
 
 double Distance (int numAx, int numAy, int numAz, int numBx, int numBy, int numBz)
 {
     double distance = Math.Sqrt(Math.Pow(numBx - numAx, 2) + Math.Pow(numBy - numAy, 2) + Math.Pow(numBz - numAz, 2));
     return distance;
 }
-double result = Math.Round(distance, 2, MidpointRounding.ToZero);
-
-Console.WriteLine($"Расстояние между точками: {result}");
