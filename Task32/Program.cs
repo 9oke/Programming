@@ -2,10 +2,6 @@
 // массива: положительные элементы замените на
 // соответствующие отрицательные, и наоборот.
 // [-4, -8, 8, 2] -> [4, 8, -8, -2]
-// Задача 33: Задайте массив. Напишите программу, которая
-// определяет, присутствует ли заданное число в массиве.
-// 4; массив [6, 7, 19, 345, 3] -> нет
-// 3; массив [6, 7, 19, 345, 3] -> да
 
 int[] CreateArrayRndInt(int size, int min, int max)
 {
@@ -36,31 +32,23 @@ void InverseArray(int [] arr)
     }
 }
 
-
-bool NumberInArray (int num, int[] arr)
-{
-    for (int i = 0; i < arr.Length; i++)
-    {
-        if (arr[i] == num) return true;
-    }
-    return false;
-}
-
 Console.WriteLine ("Введите число элементов");
 int elements = Convert.ToInt32(Console.ReadLine());
+int [] arr = new int [elements];
 
 Console.WriteLine ("Введите минимальное число диапазона");
 int minimum = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine ("Введите максимальное число диапазона");
 int maximum = Convert.ToInt32(Console.ReadLine());
-int[] array = CreateArrayRndInt(elements, minimum, maximum);
+int[] array = CreateArrayRndInt(elements, minimum, maximum+1);
 
 
 Console.Write("[");
 PrintArray(array, ",");
 Console.WriteLine("]");
 
-Console.WriteLine ("Введите число, которое нужно проверить в массиве");
-int number = Convert.ToInt32(Console.ReadLine());
-bool isExistNum = NumberInArray (number, array);
-Console.WriteLine (isExistNum ? "Число есть в массиве": "Числа нет в массиве");
+InverseArray (array);
+
+Console.Write("[");
+PrintArray(array, ",");
+Console.WriteLine("]");
